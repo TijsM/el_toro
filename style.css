@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+h1 {
+  font-size: 4em;
+  padding: 50px;
+}
+
+header {
+  height: 100vh;
+  background-image: url("./assets/retroBG.jpg");
+  background-size: cover;
+  text-align: center;
+  color: #FFF7E4;
+}
+
+header h1 {
+  padding-top: 400px;
+}
+
+header div {
+  padding: 30px;
+  font-weight: 700;
+  max-width: 500px;
+  margin: auto;
+  font-size: 1.2em;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #FFF7E4;
+  border: #FFF7E4 1px solid;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 25px;
+}
+/*# sourceMappingURL=style.css.map */
