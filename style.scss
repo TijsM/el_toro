@@ -1,43 +1,92 @@
 //colors
-$light: #FFF7E4;
+$light: #fff7e4;
 $dark: #414141;
 $green: #086564;
 
-h1{
-    font-size: 4em;
-    padding: 50px;
-   
+html {
+  background-color: $dark;
+  color: $dark;
+}
+h1 {
+  font-size: 4em;
+  padding: 50px;
 }
 
-header{
-    height: 100vh;
-    background-image: url('./assets/retroBG.jpg');
-    background-size: cover;
-    text-align: center;
+h2 {
+  margin-top: 20px;
+  font-size: 2em;
+}
 
+h3 {
+  align-self: center;
+}
+
+.textGreen {
+  color: $green;
+}
+
+header {
+  height: 100vh;
+  background-image: url("./assets/retroBG.jpg");
+  background-size: cover;
+  text-align: center;
+
+  color: $light;
+
+  h1 {
+    padding-top: 400px;
+  }
+
+  div {
+    padding: 30px;
+    font-weight: 700;
+    max-width: 500px;
+    margin: auto;
+    font-size: 1.2em;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
     color: $light;
-
-    h1{
-        padding-top: 400px;
-    }
-
-    div{
-        padding: 30px;
-        font-weight: 700;
-        max-width: 500px;
-        margin: auto;
-        font-size: 1.2em;
-    }
-
-    button{
-        background-color: transparent;
-        border: none;
-        font-size: 1.5em;
-        color: $light;
-        border: $light 1px solid;
-        border-radius: 5px;
-        position: absolute;
-        bottom: 25px;
-    }
+    border: $light 1px solid;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 25px;
+  }
 }
 
+#calendar {
+  background-image: url("./assets/calendarVector.svg");
+  width: 50%;
+  margin-top: 45px;
+  margin-left: 15%;
+  height: 400px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+
+  article {
+    margin-left: 50px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    width: 100%;
+    justify-content: center;
+
+    .details {
+      margin-left: 45px;
+      border-left: solid 1px $green;
+      padding: 15px;
+      div {
+        display: grid;
+        grid-template-columns: 15% 85%;
+      }
+    }
+  }
+}
