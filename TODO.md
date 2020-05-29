@@ -2,13 +2,12 @@
 
 Retro el toro
 
-### Todo
+### Todo 🧾
 
-- [ ] basic version practical  
 
 ### In Progress 👷‍♂️
 
-- [ ] basic version sign up  
+- [ ] basic version practical  
 
 ### blocking 🚧
 
@@ -16,6 +15,7 @@ Retro el toro
 ### Done ✅
 
 - [ ] basic version parcours  
-- [ ] basic version  calendar  
 - [ ] basic version landing  
+- [ ] basic version calendar  
+- [ ] basic version sign in  
 

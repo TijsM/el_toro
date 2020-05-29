@@ -1,6 +1,7 @@
 html {
   background-color: #414141;
   color: #414141;
+  font-size: 1.2em;
 }
 
 h1 {
@@ -160,9 +161,10 @@ header button {
   border: black solid 1px;
 }
 
-#inschrijvingen #inschrijvingKinderen, #inschrijvingen #inschrijvingKoers {
-  height: 400px;
-  width: 400px;
+#inschrijvingen #inschrijvingKinderen,
+#inschrijvingen #inschrijvingKoers {
+  height: 600px;
+  width: 600px;
   background-image: url("./assets/inschrijvingVector.svg");
   background-size: 90%;
   background-repeat: no-repeat;
@@ -172,12 +174,49 @@ header button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#praktisch {
+  color: #fff7e4;
+}
+
+#praktisch .praktischContent {
+  margin: 30px;
+}
+
+#praktisch .praktischContent article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 75%;
+      grid-template-columns: 25% 75%;
+  margin: 30px;
+}
+
+#praktisch .praktischContent article div {
+  padding-left: 30px;
+  border-left: #086564 2px solid;
+  padding: 10px 50px;
+}
+
+#praktisch .praktischContent article div ol {
+  margin-left: 15px;
+}
+
+#praktisch .praktischContent article div ol li {
+  margin-bottom: 20px;
+}
+
+#praktisch .praktischContent article div ul {
+  margin-left: 15px;
+}
+
+#praktisch .praktischContent article div ul li {
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=style.css.map */

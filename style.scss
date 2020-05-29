@@ -6,6 +6,7 @@ $green: #086564;
 html {
   background-color: $dark;
   color: $dark;
+  font-size: 1.2em;
 }
 h1 {
   font-size: 4em;
@@ -120,19 +121,18 @@ header {
   }
 }
 
-#inschrijvingen{
-
-  #inschrijvingContainer{
+#inschrijvingen {
+  #inschrijvingContainer {
     display: flex;
-    justify-content: space-around;;
+    justify-content: space-around;
   }
 
-  form{
+  form {
     display: flex;
     flex-direction: column;
     width: 75%;
 
-    input{
+    input {
       background-color: transparent;
       padding-top: 10px;
       margin: 10px;
@@ -140,17 +140,49 @@ header {
     }
   }
 
-  #inschrijvingKinderen, #inschrijvingKoers{
-    height: 400px;
-    width: 400px;
+  #inschrijvingKinderen,
+  #inschrijvingKoers {
+    height: 600px;
+    width: 600px;
     background-image: url("./assets/inschrijvingVector.svg");
     background-size: 90%;
     background-repeat: no-repeat;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
+  }
+}
 
+#praktisch {
+  color: $light;
+  .praktischContent {
+    margin: 30px;
+
+    article {
+      display: grid;
+      grid-template-columns: 25% 75%;
+      margin: 30px;
+
+      div {
+        padding-left: 30px;
+        border-left: $green 2px solid;
+        padding: 10px 50px;
+
+        ol {
+          margin-left: 15px;
+          li {
+            margin-bottom: 20px;
+          }
+        }
+        ul {
+          margin-left: 15px;
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
   }
 }
