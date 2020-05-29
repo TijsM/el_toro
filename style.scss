@@ -15,6 +15,7 @@ h1 {
 h2 {
   margin-top: 20px;
   font-size: 2em;
+  text-align: center;
 }
 
 h3 {
@@ -23,6 +24,10 @@ h3 {
 
 .textGreen {
   color: $green;
+}
+
+.textYellow {
+  color: $light;
 }
 
 header {
@@ -59,12 +64,13 @@ header {
 
 #calendar {
   background-image: url("./assets/calendarVector.svg");
-  width: 50%;
+  width: 700px;
+  height: 525px;
   margin-top: 45px;
   margin-left: 15%;
-  height: 400px;
-
-  background-size: contain;
+  padding: 40px;
+  box-sizing: border-box;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -75,7 +81,7 @@ header {
     margin-left: 50px;
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 25% 75%;
     width: 100%;
     justify-content: center;
 
@@ -88,5 +94,27 @@ header {
         grid-template-columns: 15% 85%;
       }
     }
+  }
+}
+
+#parcours {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-image: url("./assets/parcoursVector.svg");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 60% 50%;
+  justify-items: center;
+
+  .retroBike1 {
+    width: 400px;
+    margin-top: 150px;
+    margin-right: 450px;
+  }
+
+  .parcoursImage {
+    width: 500px;
+    border-radius: 25px;
   }
 }
