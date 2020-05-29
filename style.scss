@@ -64,14 +64,15 @@ header {
 
 #calendar {
   background-image: url("./assets/calendarVector.svg");
+  background-size: 90%;
+  background-repeat: no-repeat;
   width: 700px;
   height: 525px;
   margin-top: 45px;
   margin-left: 15%;
   padding: 40px;
   box-sizing: border-box;
-  background-size: cover;
-  background-repeat: no-repeat;
+
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -116,5 +117,40 @@ header {
   .parcoursImage {
     width: 500px;
     border-radius: 25px;
+  }
+}
+
+#inschrijvingen{
+
+  #inschrijvingContainer{
+    display: flex;
+    justify-content: space-around;;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    input{
+      background-color: transparent;
+      padding-top: 10px;
+      margin: 10px;
+      border: black solid 1px;
+    }
+  }
+
+  #inschrijvingKinderen, #inschrijvingKoers{
+    height: 400px;
+    width: 400px;
+    background-image: url("./assets/inschrijvingVector.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
   }
 }

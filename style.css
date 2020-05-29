@@ -61,6 +61,8 @@ header button {
 
 #calendar {
   background-image: url("./assets/calendarVector.svg");
+  background-size: 90%;
+  background-repeat: no-repeat;
   width: 700px;
   height: 525px;
   margin-top: 45px;
@@ -68,8 +70,6 @@ header button {
   padding: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,5 +132,52 @@ header button {
 #parcours .parcoursImage {
   width: 500px;
   border-radius: 25px;
+}
+
+#inschrijvingen #inschrijvingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#inschrijvingen form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75%;
+}
+
+#inschrijvingen form input {
+  background-color: transparent;
+  padding-top: 10px;
+  margin: 10px;
+  border: black solid 1px;
+}
+
+#inschrijvingen #inschrijvingKinderen, #inschrijvingen #inschrijvingKoers {
+  height: 400px;
+  width: 400px;
+  background-image: url("./assets/inschrijvingVector.svg");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */
