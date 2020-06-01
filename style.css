@@ -29,6 +29,17 @@ h3 {
   color: #fff7e4;
 }
 
+button {
+  border: #414141 1px solid;
+  color: #414141;
+  background-color: transparent;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 0.85em;
+}
+
 header {
   height: 100vh;
   background-image: url("./assets/retroBG.jpg");
@@ -38,7 +49,7 @@ header {
 }
 
 header h1 {
-  padding-top: 400px;
+  padding-top: 250px;
 }
 
 header div {
@@ -56,8 +67,8 @@ header button {
   color: #fff7e4;
   border: #fff7e4 1px solid;
   border-radius: 5px;
-  position: absolute;
   bottom: 25px;
+  margin-top: 50px;
 }
 
 #calendar {
@@ -100,7 +111,7 @@ header button {
 
 #calendar article .details {
   margin-left: 45px;
-  border-left: solid 1px #086564;
+  border-left: solid 2px #086564;
   padding: 15px;
 }
 
@@ -161,21 +172,27 @@ header button {
   border: black solid 1px;
 }
 
+#inschrijvingen form .dateInput input {
+  width: 80px;
+}
+
 #inschrijvingen #inschrijvingKinderen,
 #inschrijvingen #inschrijvingKoers {
-  height: 600px;
-  width: 600px;
+  height: 625px;
+  width: 575px;
   background-image: url("./assets/inschrijvingVector.svg");
   background-size: 90%;
   background-repeat: no-repeat;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -188,6 +205,10 @@ header button {
 
 #praktisch .praktischContent {
   margin: 30px;
+}
+
+#praktisch .praktischContent h3 {
+  text-align: center;
 }
 
 #praktisch .praktischContent article {
