@@ -6,6 +6,7 @@
     <title>GP El Toro</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+
   </head>
 
   <body>
@@ -19,7 +20,6 @@
         </div>
         <button>Inschrijven</button>
       </header>
-
       <section id="calendar">
         <h2 class="textGreen">
           Kalender
@@ -91,8 +91,7 @@
         <div id="inschrijvingContainer">
           <article id="inschrijvingKinderen">
             <h3 class="textGreen">Kinderkoers</h3>
-            <form>
-              <label>Naam</label>
+            <form method="post" action="#" name="theForm" >              <label>Naam</label>
               <input type="text" />
               <label>E-mail</label>
               <input type="text" />
@@ -100,40 +99,38 @@
               <div>
                 <input type="radio" name="leeftijdcat" value="1" /> tot 6 jaar
                 <input type="radio" name="leeftijdcat" value="2" /> 6 tot 7 jaar
-                <input type="radio" name="leeftijdcat" value="3" /> 8 tot 10 jaar
+                <input type="radio" name="leeftijdcat" value="3" /> 8 tot 10
+                jaar
               </div>
               <label>Geboortedatum</label>
               <div class="dateInput">
-                <input type="input">
-                <input type="input">
-                <input type="input">
+                <input type="input" />
+                <input type="input" />
+                <input type="input" />
               </div>
+              <button id='registerKidButton'>schrijf in!</button>
             </form>
-            <button>schrijf in!</button>
           </article>
           <article id="inschrijvingKoers">
             <h3 class="textGreen">Retrokoers</h3>
-
             <form>
               <label>Naam</label>
               <input type="text" />
               <label>E-mail</label>
               <input type="text" />
-              <label>Leeftijdscategorie</label>
-              <input type="text" />
               <label>Geboortedatum</label>
               <div class="dateInput">
-                <input type="input">
-                <input type="input">
-                <input type="input">
+                <input type="input" />
+                <input type="input" />
+                <input type="input" />
               </div>
               <label>Dikkelvennenaar</label>
               <div>
-                <input type="radio" name="leeftijdcat" value="1" /> ja
-                <input type="radio" name="leeftijdcat" value="2" /> nee
+                <input type="radio" name="local" value="1" /> ja
+                <input type="radio" name="local" value="2" /> nee
               </div>
+              <button>schrijf in!</button>
             </form>
-            <button>schrijf in!</button>
           </article>
         </div>
       </section>
@@ -220,5 +217,12 @@
         </div>
       </section>
     </main>
+    <script src="./app.js"></script>
+
+    <!-- <script>
+      function registerKid() {
+        console.log("yeet");
+      }
+    </script> -->
   </body>
 </html>

@@ -31,7 +31,7 @@ h3 {
   color: $light;
 }
 
-button{
+button {
   border: $dark 1px solid;
   color: $dark;
   background-color: transparent;
@@ -93,15 +93,20 @@ header {
   article {
     margin-left: 50px;
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: 25% 75%;
+    display: flex;
+    // grid-template-columns: 25% 75%;
     width: 100%;
     justify-content: center;
 
+    h3 {
+      width: 25%;
+    }
     .details {
       margin-left: 45px;
       border-left: solid 2px $green;
       padding: 15px;
+      width: 75%;
+
       div {
         display: grid;
         grid-template-columns: 15% 85%;
@@ -150,8 +155,8 @@ header {
       border: black solid 1px;
     }
 
-    .dateInput{
-      input{
+    .dateInput {
+      input {
         width: 80px;
       }
     }
@@ -159,13 +164,13 @@ header {
 
   #inschrijvingKinderen,
   #inschrijvingKoers {
-    height: 625px;
-    width: 575px;
+    height: 700px;
+    width: 650px;
+    min-width: 500;
     background-image: url("./assets/inschrijvingVector.svg");
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
-  
 
     display: flex;
     align-items: center;
@@ -179,7 +184,7 @@ header {
   .praktischContent {
     margin: 30px;
 
-    h3{
+    h3 {
       text-align: center;
     }
 
@@ -207,5 +212,25 @@ header {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #calendar {
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 100%;
+    ;
+    article {
+      flex-direction: column;
+      .details{
+        border-left: none;
+
+      }
+    }
+  }
+  #inschrijvingContainer {
+    flex-direction: column;
+    align-items: center;
   }
 }
