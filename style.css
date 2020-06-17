@@ -29,7 +29,12 @@ h3 {
   color: #fff7e4;
 }
 
-button {
+button, a {
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin-top: px;
+  text-decoration: none;
   border: #414141 1px solid;
   color: #414141;
   background-color: transparent;
@@ -60,15 +65,12 @@ header div {
   font-size: 1.2em;
 }
 
-header button {
-  background-color: transparent;
-  border: none;
+header a {
+  display: inline;
+  padding: 10px;
   font-size: 1.5em;
   color: #fff7e4;
-  border: #fff7e4 1px solid;
-  border-radius: 5px;
-  bottom: 25px;
-  margin-top: 50px;
+  border: #fff7e4 2px solid;
 }
 
 #calendar {
@@ -77,6 +79,7 @@ header button {
   background-repeat: no-repeat;
   width: 700px;
   height: 525px;
+  max-width: 100vw;
   margin-top: 45px;
   margin-left: 15%;
   padding: 40px;

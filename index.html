@@ -18,7 +18,7 @@
           in retro outfit en waar geschoren benen taboe zijn. Tenzij je van het
           vrouwelijke type bent.
         </div>
-        <button>Inschrijven</button>
+        <a data-scroll href="#inschrijvingen">Inschrijven</a>
       </header>
       <section id="calendar">
         <h2 class="textGreen">
@@ -41,7 +41,7 @@
               <span>14u40</span>
               <span> 8 - 10 jaar - 1600 m</span>
             </div>
-            <button>Inschrijven</button>
+            <a data-scroll href="#inschrijvingKinderen">Inschrijven</a>
           </div>
         </article>
 
@@ -62,7 +62,7 @@
               <span>14u40</span>
               <span> 8 - 10 jaar - 1600 m</span>
             </div>
-            <button>Inschrijven</button>
+            <a data-scroll href="#inschrijvingKoers">Inschrijven</a>
           </div>
         </article>
       </section>
@@ -212,13 +212,11 @@
       </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
     <script src="./airtable.js"></script>
     <script src="./app.js"></script>
-
-    <!-- <script>
-      function registerKid() {
-        console.log("yeet");
-      }
-    </script> -->
   </body>
 </html>

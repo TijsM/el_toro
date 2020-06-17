@@ -31,7 +31,12 @@ h3 {
   color: $light;
 }
 
-button {
+button, a{
+   display: block;
+   width: 100px;
+   text-align: center;
+  margin-top: px;
+  text-decoration: none;
   border: $dark 1px solid;
   color: $dark;
   background-color: transparent;
@@ -62,15 +67,13 @@ header {
     font-size: 1.2em;
   }
 
-  button {
-    background-color: transparent;
-    border: none;
+  a {
+    display: inline;
+    padding: 10px;
     font-size: 1.5em;
     color: $light;
-    border: $light 1px solid;
-    border-radius: 5px;
-    bottom: 25px;
-    margin-top: 50px;
+    border: $light 2px solid;
+
   }
 }
 
@@ -80,6 +83,7 @@ header {
   background-repeat: no-repeat;
   width: 700px;
   height: 525px;
+  max-width: 100vw;
   margin-top: 45px;
   margin-left: 15%;
   padding: 40px;
@@ -111,6 +115,7 @@ header {
         display: grid;
         grid-template-columns: 15% 85%;
       }
+
     }
   }
 }
