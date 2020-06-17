@@ -2,13 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GP El Toro</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-
   </head>
-
   <body>
     <main>
       <header>
@@ -91,39 +89,40 @@
         <div id="inschrijvingContainer">
           <article id="inschrijvingKinderen">
             <h3 class="textGreen">Kinderkoers</h3>
-            <form method="post" action="#" name="theForm" >
+            <form method="post" action="#" name="theForm">
               <label>Naam</label>
-              <input id='kidName' type="text" value="" />
+              <input id="kidName" type="text" value="" />
               <label>E-mail</label>
-              <input id='kidEmail' type="text" />
+              <input id="kidEmail" type="text" />
               <label>Geboortedatum</label>
               <div class="dateInput">
-                <input id='kidDay' type="input" />
-                <input id='kidMonth' type="input" />
-                <input id='kidYear' type="input" />
+                <input id="kidDay" type="input" />
+                <input id="kidMonth" type="input" />
+                <input id="kidYear" type="input" />
               </div>
-              <button id='registerKidButton'>schrijf in!</button>
+              <button id="registerKidButton">schrijf in!</button>
             </form>
           </article>
           <article id="inschrijvingKoers">
             <h3 class="textGreen">Retrokoers</h3>
             <form>
               <label>Naam</label>
-              <input id='retroName' type="text" />
+              <input id="retroName" type="text" />
               <label>E-mail</label>
-              <input id='retroEmail' type="text" />
+              <input id="retroEmail" type="text" />
               <label>Geboortedatum</label>
               <div class="dateInput">
-                <input id='retroDay' type="input" />
-                <input id='retroMonth' type="input" />
-                <input id='retroYear' type="input" />
+                <input id="retroDay" type="input" />
+                <input id="retroMonth" type="input" />
+                <input id="retroYear" type="input" />
               </div>
               <label>Dikkelvennenaar</label>
               <div>
-                <input id='retroIsLocal' type="radio" name="local"/> ja
-                <input id='retroIsNoLocal' type='radio' name="local" checked /> nee
+                <input id="retroIsLocal" type="radio" name="local" /> ja
+                <input id="retroIsNoLocal" type="radio" name="local" checked />
+                nee
               </div>
-              <button id='registerRetroButton'>schrijf in!</button>
+              <button id="registerRetroButton">schrijf in!</button>
             </form>
           </article>
         </div>
