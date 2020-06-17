@@ -21,6 +21,10 @@ h3 {
       align-self: center;
 }
 
+section {
+  margin-top: 50px;
+}
+
 .textGreen {
   color: #086564;
 }
@@ -29,7 +33,8 @@ h3 {
   color: #fff7e4;
 }
 
-button, a {
+button,
+a {
   display: block;
   width: 100px;
   text-align: center;
@@ -74,17 +79,16 @@ header a {
 }
 
 #calendar {
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 50px;
+  width: 75%;
+  height: 700px;
+  min-width: 500px;
   background-image: url("./assets/calendarVector.svg");
   background-size: 90%;
   background-repeat: no-repeat;
-  width: 700px;
-  height: 525px;
-  max-width: 100vw;
-  margin-top: 45px;
-  margin-left: 15%;
-  padding: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  background-position-x: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,10 +109,13 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 75%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #calendar article h3 {
@@ -125,8 +132,8 @@ header a {
 #calendar article .details div {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% 85%;
-      grid-template-columns: 15% 85%;
+  -ms-grid-columns: 25% 75%;
+      grid-template-columns: 25% 75%;
 }
 
 #parcours {
@@ -135,6 +142,7 @@ header a {
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
+  grid-auto-flow: row;
   background-image: url("./assets/parcoursVector.svg");
   background-repeat: no-repeat;
   background-size: 30%;
@@ -173,6 +181,7 @@ header a {
 }
 
 #inschrijvingen form input {
+  width: 300px;
   background-color: transparent;
   padding-top: 10px;
   margin: 10px;
@@ -187,7 +196,7 @@ header a {
 #inschrijvingen #inschrijvingKoers {
   height: 700px;
   width: 650px;
-  min-width: 500;
+  min-width: 300px;
   background-image: url("./assets/inschrijvingVector.svg");
   background-size: 90%;
   background-repeat: no-repeat;
@@ -250,11 +259,6 @@ header a {
 }
 
 @media screen and (max-width: 1200px) {
-  #calendar {
-    margin-left: auto;
-    margin-right: auto;
-    background-size: 100%;
-  }
   #calendar article {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -272,6 +276,55 @@ header a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #calendar {
+    width: 100%;
+    background-size: 100%;
+  }
+  #parcours {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #parcours .retroBike1 {
+    display: none;
+  }
+  #parcours .right {
+    margin-top: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #calendar {
+    overflow: hidden;
+    background-size: 700px;
+  }
+  #calendar article {
+    margin-left: 0px;
+  }
+  #calendar article .details {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #parcours .parcoursImage {
+    width: 100%;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
