@@ -353,5 +353,23 @@ header a {
             box-sizing: border-box;
     border-radius: 25px;
   }
+  #praktisch .praktischContent {
+    margin: 0px;
+  }
+  #praktisch .praktischContent article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #praktisch .praktischContent article div {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    border-left: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
