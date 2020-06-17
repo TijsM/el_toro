@@ -2,17 +2,6 @@ const createDateString = (day, month, year) => {
   return `${day}/${month}/${year}`;
 };
 
-const saveInAirtable = (table, body) => {
-  fetch(`https://api.airtable.com/v0/app1OzpZLbfIvdOUS/${table}`, {
-    method: "POST",
-    headers: {
-      Authorization: "Bearer XXXXXXX",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-};
-
 document
   .getElementById("registerKidButton")
   .addEventListener("click", (event) => {
