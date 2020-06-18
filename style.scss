@@ -183,8 +183,8 @@ header {
 
   #inschrijvingKinderen,
   #inschrijvingKoers {
-    height: 700px;
-    width: 650px;
+    height: 550px;
+    width: 550px;
     // min-width: 300px;
     background-image: url("./assets/inschrijvingVector.svg");
     background-size: 90%;
@@ -195,6 +195,19 @@ header {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+
+      .radio {
+        width: 20px;
+      }
+    }
   }
 }
 
@@ -232,6 +245,20 @@ header {
       }
     }
   }
+}
+
+#popupMessage{
+  display: none;
+  background-color: red;
+  width: 90%;
+  position: fixed;
+  bottom: 15px;
+  text-align: center;
+  padding: 20px;
+  margin:15px ;
+  box-sizing: border-box;
+  border-radius: 15px;
+  color: white;
 }
 
 @media screen and (max-width: 1200px) {
@@ -298,7 +325,8 @@ header {
 
   #parcours{
     .parcoursImage {
-      width: 100%;
+      display: block;
+      width: 100vw;
       padding: 15px;
       box-sizing: border-box;
       border-radius: 25px;

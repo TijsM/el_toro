@@ -2,10 +2,21 @@ const createDateString = (day, month, year) => {
   return `${day}/${month}/${year}`;
 };
 
+const displayMessage = (text, backgroundColor = 'red') => {
+  messageBox =  document.getElementById('popupMessage')
+  messageBox.style.backgroundColor=backgroundColor;
+  messageBox.innerHTML = text;
+
+  messageBox.style.display = 'block';
+  setTimeout(() => {
+    messageBox.style.display='none'
+  }, 1000);
+}
+
+
 document
   .getElementById("registerKidButton")
   .addEventListener("click", (event) => {
-    console.log("yeet", event);
     event.preventDefault();
 
     const kidname = document.getElementById("kidName").value;
@@ -13,6 +24,11 @@ document
     const kidDay = document.getElementById("kidDay").value;
     const kidMonth = document.getElementById("kidMonth").value;
     const kidYear = document.getElementById("kidYear").value;
+
+    displayMessage('test')
+
+
+
 
     saveInAirtable("Kinderen", {
       fields: {

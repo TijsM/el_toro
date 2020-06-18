@@ -204,8 +204,8 @@ header a {
 
 #inschrijvingen #inschrijvingKinderen,
 #inschrijvingen #inschrijvingKoers {
-  height: 700px;
-  width: 650px;
+  height: 550px;
+  width: 550px;
   background-image: url("./assets/inschrijvingVector.svg");
   background-size: 90%;
   background-repeat: no-repeat;
@@ -223,6 +223,31 @@ header a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#inschrijvingen #inschrijvingKinderen form,
+#inschrijvingen #inschrijvingKoers form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#inschrijvingen #inschrijvingKinderen form .radio,
+#inschrijvingen #inschrijvingKoers form .radio {
+  width: 20px;
 }
 
 #praktisch {
@@ -265,6 +290,21 @@ header a {
 
 #praktisch .praktischContent article div ul li {
   margin-bottom: 5px;
+}
+
+#popupMessage {
+  display: none;
+  background-color: red;
+  width: 90%;
+  position: fixed;
+  bottom: 15px;
+  text-align: center;
+  padding: 20px;
+  margin: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 15px;
+  color: white;
 }
 
 @media screen and (max-width: 1200px) {
@@ -347,7 +387,8 @@ header a {
     margin-left: 0px;
   }
   #parcours .parcoursImage {
-    width: 100%;
+    display: block;
+    width: 100vw;
     padding: 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
