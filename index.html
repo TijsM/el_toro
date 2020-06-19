@@ -6,6 +6,7 @@
     <title>GP El Toro</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
     <main>
@@ -93,7 +94,7 @@
               <label>Naam</label>
               <input id="kidName" type="text" value="" />
               <label>E-mail</label>
-              <input id="kidEmail" type="text" />
+              <input id="kidEmail" type="email" />
               <label>Geboortedatum</label>
               <div class="dateInput">
                 <input id="kidDay" type="input" />
@@ -214,12 +215,12 @@
     <div id='popupMessage'>
       message
     </div>
+    <script src="./airtable.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
       var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
-    <script src="./airtable.js"></script>
+    </script> -->
     <script src="./app.js"></script>
   </body>
 </html>
