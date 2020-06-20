@@ -15,6 +15,10 @@
         emailjs.init("user_24HpkEdYI2bCtwxzDUnSk");
       })();
     </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -98,33 +102,36 @@
         </h2>
         <div id="inschrijvingContainer">
           <article id="inschrijvingKinderen">
-            <h3 class="textGreen">Kinderkoers</h3>
-            <form method="post" action="#" name="kidsForm" id="kidsForm">
-              <label>Naam</label>
-              <input id="kidName" name="kidName" type="text" />
-              <label>E-mail</label>
-              <input id="kidEmail" name="kidEmail" type="email" />
-              <label>Geboortedatum</label>
-              <div class="dateInput">
-                <input id="kidDay" type="input" />
-                <input id="kidMonth" type="input" />
-                <input id="kidYear" type="input" />
-              </div>
-              <button id="registerKidButton">schrijf in!</button>
-            </form>
+            <div class="inschrijvingsContaier">
+              <h3 class="textGreen">Kinderkoers</h3>
+              <form method="post" action="#" name="kidsForm" id="kidsForm">
+                <label>Volledige naam</label>
+                <input id="kidName" name="kidName" type="text" />
+                <label>E-mail</label>
+                <input id="kidEmail" name="kidEmail" type="email" />
+                <label>Geboortedatum</label>
+                <div class="dateInput">
+                  <input id="kidDay" type="number" />
+                  <input id="kidMonth" type="number" />
+                  <input id="kidYear" type="number" />
+                </div>
+                <button id="registerKidButton">schrijf in!</button>
+              </form>
+            </div>
           </article>
           <article id="inschrijvingKoers">
+          <div class="inschrijvingsContaier">
             <h3 class="textGreen">Retrokoers</h3>
             <form>
-              <label>Naam</label>
-              <input id="retroName" type="text" />
+              <label>Volledige naam</label>
+              <input id="retroName" name="kidName" type="text" />
               <label>E-mail</label>
-              <input id="retroEmail" type="text" />
+              <input id="retroEmail" name="kidEmail" type="text" />
               <label>Geboortedatum</label>
               <div class="dateInput">
-                <input id="retroDay" type="input" />
-                <input id="retroMonth" type="input" />
-                <input id="retroYear" type="input" />
+                <input id="retroDay" type="number" />
+                <input id="retroMonth" type="number" />
+                <input id="retroYear" type="number" />
               </div>
               <label>Dikkelvennenaar</label>
               <div>
@@ -146,6 +153,7 @@
               </div>
               <button id="registerRetroButton">schrijf in!</button>
             </form>
+          </div>
           </article>
         </div>
       </section>

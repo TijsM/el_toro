@@ -10,7 +10,7 @@ const displayMessage = (text, backgroundColor = "red") => {
   messageBox.style.display = "block";
   setTimeout(() => {
     messageBox.style.display = "none";
-  }, 1000);
+  }, 7000);
 };
 
 const checkEmpty = (text, fieldName) => {
@@ -90,6 +90,8 @@ document
       });
 
       emailjs.sendForm('gmail', 'signupretro', this);
+
+      displayMessage('Bedankt voor de registratie!, verdere info volgt', '#065755')
     }
   });
 
@@ -125,5 +127,9 @@ document
           Dikkelvennenaar: retroIsLocal,
         },
       });
+
+      emailjs.sendForm('gmail', 'signupretro', this);
+
+      displayMessage('Bedankt voor de registratie!, verdere info volgt', '#065755')
     }
   });
