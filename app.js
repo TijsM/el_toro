@@ -58,8 +58,9 @@ const checkDate = (_day, _month, _year) => {
 };
 
 document
-  .getElementById("registerKidButton")
-  .addEventListener("click", (event) => {
+  .getElementById("kidsForm")
+  .addEventListener("submit", function(event) {
+    console.log('yeet')
     event.preventDefault();
 
     let formIsValid = true;
@@ -87,12 +88,14 @@ document
           Geboortedatum: createDateString(kidDay, kidMonth, kidYear),
         },
       });
+
+      emailjs.sendForm('gmail', 'signupretro', this);
     }
   });
 
 document
   .getElementById("registerRetroButton")
-  .addEventListener("click", (event) => {
+  .addEventListener("click", function(event) {
     event.preventDefault();
 
     let formIsValid = true;

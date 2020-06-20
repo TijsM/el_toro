@@ -6,8 +6,17 @@
     <title>GP El Toro</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_24HpkEdYI2bCtwxzDUnSk");
+      })();
+    </script>
   </head>
+
   <body>
     <main>
       <header>
@@ -90,11 +99,11 @@
         <div id="inschrijvingContainer">
           <article id="inschrijvingKinderen">
             <h3 class="textGreen">Kinderkoers</h3>
-            <form method="post" action="#" name="theForm">
+            <form method="post" action="#" name="kidsForm" id="kidsForm">
               <label>Naam</label>
-              <input id="kidName" type="text" value="" />
+              <input id="kidName" name="kidName" type="text" />
               <label>E-mail</label>
-              <input id="kidEmail" type="email" />
+              <input id="kidEmail" name="kidEmail" type="email" />
               <label>Geboortedatum</label>
               <div class="dateInput">
                 <input id="kidDay" type="input" />
@@ -119,8 +128,20 @@
               </div>
               <label>Dikkelvennenaar</label>
               <div>
-                <input id="retroIsLocal" class="radio" type="radio" name="local" /> ja
-                <input id="retroIsNoLocal" class="radio" type="radio" name="local" checked />
+                <input
+                  id="retroIsLocal"
+                  class="radio"
+                  type="radio"
+                  name="local"
+                />
+                ja
+                <input
+                  id="retroIsNoLocal"
+                  class="radio"
+                  type="radio"
+                  name="local"
+                  checked
+                />
                 nee
               </div>
               <button id="registerRetroButton">schrijf in!</button>
@@ -212,15 +233,15 @@
       </section>
     </main>
 
-    <div id='popupMessage'>
+    <div id="popupMessage">
       message
     </div>
-    <script src="./airtable.js"></script>
 
-    <!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./airtable.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
       var scroll = new SmoothScroll('a[href*="#"]');
-    </script> -->
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>
