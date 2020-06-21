@@ -33,6 +33,7 @@
 
       gtag("config", "UA-148987890-3");
     </script>
+
   </head>
 
   <body>
@@ -67,7 +68,7 @@
               <span>14u40</span>
               <span> 8 - 10 jaar - 1600 m</span>
             </div>
-            <a data-scroll href="#inschrijvingKinderen">Inschrijven</a>
+            <a data-scroll href="#inschrijvingKoers">Inschrijven</a>
           </div>
         </article>
 
@@ -94,7 +95,7 @@
       </section>
       <section id="parcours">
         <div class="left">
-          <h2 class="textYellow">
+          <h2 id="parcoursHead" class="textYellow">
             Parcours
           </h2>
 
@@ -115,7 +116,7 @@
           Inschrijven
         </h2>
         <div id="inschrijvingContainer">
-          <article id="inschrijvingKinderen">
+          <!-- <article id="inschrijvingKinderen">
             <div class="inschrijvingsContaier">
               <h3 class="textGreen">Kinderkoers</h3>
               <form method="post" action="#" name="kidsForm" id="kidsForm">
@@ -132,11 +133,11 @@
                 <button id="registerKidButton">schrijf in!</button>
               </form>
             </div>
-          </article>
+          </article> -->
           <article id="inschrijvingKoers">
             <div class="inschrijvingsContaier">
               <h3 class="textGreen">Retrokoers</h3>
-              <form>
+              <form method="post" action="#" name="signUpForm" id="signUpForm">
                 <label>Volledige naam</label>
                 <input id="retroName" name="kidName" type="text" />
                 <label>E-mail</label>
@@ -161,6 +162,24 @@
                     class="radio"
                     type="radio"
                     name="local"
+                    checked
+                  />
+                  nee
+                </div>
+                <label>Kinderkoers</label>
+                <div>
+                  <input
+                    id="isKid"
+                    class="radio"
+                    type="radio"
+                    name="kidCheck"
+                  />
+                  ja
+                  <input
+                    id="isAdult"
+                    class="radio"
+                    type="radio"
+                    name="kidCheck"
                     checked
                   />
                   nee
@@ -259,11 +278,14 @@
       message
     </div>
 
+
+    <script type="module" src="https://unpkg.com/rough-notation?module"></script>
+
     <script src="./airtable.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
       var scroll = new SmoothScroll('a[href*="#"]');
     </script>
-    <script src="./app.js"></script>
+    <script type='module' src="./app.js"></script>
   </body>
 </html>

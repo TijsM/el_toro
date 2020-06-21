@@ -206,8 +206,8 @@ header a {
 
 #inschrijvingen #inschrijvingKinderen,
 #inschrijvingen #inschrijvingKoers {
-  height: 600px;
-  width: 600px;
+  height: 800px;
+  width: 800px;
   background-image: url("./assets/inschrijvingVector.svg");
   background-size: 90%;
   background-repeat: no-repeat;
@@ -358,12 +358,7 @@ header a {
   }
   #parcours .right {
     margin-top: 35px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: auto;
   }
 }
 
@@ -398,8 +393,8 @@ header a {
     margin-left: 0px;
   }
   #parcours .parcoursImage {
-    display: block;
     width: 100vw;
+    max-height: calc(100vh*1.414);
     padding: 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
