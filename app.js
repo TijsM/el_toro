@@ -1,10 +1,3 @@
-// import { annotate } from 'https://unpkg.com/rough-notation?module';
-
-// const e = document.querySelector('#parcoursHead');
-// console.log(e)
-// const annotation = annotate(e, { type: 'highlight', color: '#065755', iterations: 1, multiline: true });
-// annotation.show();
-
 
 const createDateString = (day, month, year) => {
   return `${day}/${month}/${year}`;
@@ -65,44 +58,6 @@ const checkDate = (_day, _month, _year) => {
   return true;
 };
 
-// document
-//   .getElementById("kidsForm")
-//   .addEventListener("submit", function(event) {
-//     console.log('yeet')
-//     event.preventDefault();
-
-//     let formIsValid = true;
-
-//     const kidname = document.getElementById("kidName").value;
-//     const kidEmail = document.getElementById("kidEmail").value;
-//     const kidDay = document.getElementById("kidDay").value;
-//     const kidMonth = document.getElementById("kidMonth").value;
-//     const kidYear = document.getElementById("kidYear").value;
-
-//     !checkEmpty(kidname, "naam") ? (formIsValid = false) : null;
-//     !checkEmpty(kidEmail, "email") ? (formIsValid = false) : null;
-//     !checkEmpty(kidDay, "geboortedatum") ? (formIsValid = false) : null;
-//     !checkEmpty(kidMonth, "geboortedatum") ? (formIsValid = false) : null;
-//     !checkEmpty(kidYear, "geboortedatum") ? (formIsValid = false) : null;
-
-//     !checkValidateEmail(kidEmail) ? (formIsValid = false) : null;
-//     !checkDate(kidDay, kidMonth, kidYear) ? (formIsValid = false) : null;
-
-//     if(formIsValid){
-//       saveInAirtable("Kinderen", {
-//         fields: {
-//           Naam: kidname,
-//           Email: kidEmail,
-//           Geboortedatum: createDateString(kidDay, kidMonth, kidYear),
-//         },
-//       });
-
-//       emailjs.sendForm('gmail', 'signupretro', this);
-
-//       displayMessage('Bedankt voor de registratie!, verdere info volgt', '#065755')
-//     }
-//   });
-
 document
   .getElementById("signUpForm")
   .addEventListener("submit", function(event) {
@@ -117,6 +72,9 @@ document
     const retroyear = document.getElementById("retroYear").value;
     const retroIsLocal = document.getElementById("retroIsLocal").checked;
     const isKid = document.getElementById('isKid').checked;
+
+    isScrolledIntoView(document.getElementById('isKid'))
+
 
     !checkEmpty(retroName, "naam") ? (formIsValid = false) : null;
     !checkEmpty(retroEmail, "email") ? (formIsValid = false) : null;
@@ -141,7 +99,6 @@ document
       });
 
       emailjs.sendForm('gmail', 'signupretro', this);
-
       displayMessage('Bedankt voor de registratie!, verdere info volgt', '#065755')
     }
   });
