@@ -100,10 +100,10 @@ header {
   padding-top: 50px;
   width: 75%;
   height: 700px;
-  max-width: 900px;
+  max-width: 1000px;
   // min-width: 500px;
   background-image: url("./assets/calendarVector.svg");
-  background-size: 90%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position-x: center;
   display: flex;
@@ -127,11 +127,21 @@ header {
       padding: 15px;
       width: 75%;
 
-      div {
+      .calendarItem {
         display: grid;
-        grid-template-columns: 25% 75%;
+		grid-template-columns: 25% 75%;
+		align-items: center;
+		margin-bottom: 10px;
+
+		.distance{
+			font-style: italic;
+		}
       }
-    }
+	}
+	a{
+		margin-top: 20px;
+		// color: red;
+	}
   }
 }
 
@@ -286,6 +296,8 @@ header {
 
 @media screen and (max-width: 1200px) {
   #calendar {
+	width: 85%;
+
     article {
       flex-direction: column;
       .details {
@@ -302,7 +314,7 @@ header {
 @media screen and (max-width: 1000px) {
   #calendar {
     width: 100%;
-    background-size: 100%;
+    background-size: 110%;
   }
 
   #parcours {
@@ -334,7 +346,7 @@ header {
   }
   #calendar {
     overflow: hidden;
-    background-size: 800px;
+    background-size: 900px;
 
     article {
       margin-left: 0px;
