@@ -266,7 +266,8 @@ header a {
 }
 
 #praktisch .praktischContent {
-  margin: 30px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 #praktisch .praktischContent h3 {
@@ -301,6 +302,15 @@ header a {
 
 #praktisch .praktischContent article div ul li {
   margin-bottom: 5px;
+}
+
+#praktisch .praktischContent article div .linkPlan {
+  color: #fff4da;
+  font-weight: inherit;
+  font-size: inherit;
+  display: inline;
+  text-decoration: underline;
+  border: none;
 }
 
 #popupMessage {

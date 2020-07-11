@@ -227,7 +227,9 @@ header {
 #praktisch {
   color: $light;
   .praktischContent {
-    margin: 30px;
+	// margin: 30px;
+	max-width: 1100px;
+	margin: auto;
 
     h3 {
       text-align: center;
@@ -254,7 +256,15 @@ header {
           li {
             margin-bottom: 5px;
           }
-        }
+		}
+		.linkPlan{
+			color: $light;
+			font-weight: inherit;
+			font-size: inherit;
+			display: inline;
+			text-decoration: underline;
+			border: none;
+		}
       }
     }
   }
