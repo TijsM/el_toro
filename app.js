@@ -73,7 +73,7 @@ document
     const retroIsLocal = document.getElementById("retroIsLocal").checked;
     const isKid = document.getElementById('isKid').checked;
 
-    isScrolledIntoView(document.getElementById('isKid'))
+    // isScrolledIntoView(document.getElementById('isKid'))
 
 
     !checkEmpty(retroName, "naam") ? (formIsValid = false) : null;
@@ -99,6 +99,6 @@ document
       });
 
       emailjs.sendForm('gmail', 'signupretro', this);
-      displayMessage('Bedankt voor de registratie!, verdere info volgt', '#065755')
+      displayMessage('Bedankt voor de registratie, bekijk uw mailbox voor meer info.', '#065755')
     }
   });
