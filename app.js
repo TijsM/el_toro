@@ -60,7 +60,7 @@ const checkDate = (_day, _month, _year) => {
 
 document
   .getElementById("signUpForm")
-  .addEventListener("submit", function(event) {
+  .addEventListener("submit", function (event) {
     event.preventDefault();
 
     let formIsValid = true;
@@ -87,7 +87,7 @@ document
 
     console.log('iskid', isKid)
 
-    if(formIsValid){
+    if (formIsValid) {
       saveInAirtable("Retrokoers", {
         fields: {
           Naam: retroName,
@@ -100,5 +100,11 @@ document
 
       emailjs.sendForm('gmail', 'signupretro', this);
       displayMessage('Bedankt voor de registratie, bekijk uw mailbox voor meer info.', '#065755')
+
+      document.getElementById("retroName").value = '';
+      document.getElementById("retroEmail").value = ''
+      document.getElementById("retroDay").value = ''
+      document.getElementById("retroMonth").value = ''
+      document.getElementById("retroYear").value = ''
     }
   });
