@@ -115,6 +115,11 @@ header a {
           align-items: center;
 }
 
+#calendar h3 {
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+
 #calendar article {
   margin-left: 50px;
   margin-top: 40px;
@@ -333,7 +338,7 @@ header a {
   bottom: 15px;
   text-align: center;
   padding: 20px;
-  margin: 15px;
+  left: 5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 15px;
