@@ -115,6 +115,11 @@ header a {
           align-items: center;
 }
 
+#calendar h3 {
+  margin-bottom: -20px;
+  margin-top: 15px;
+}
+
 #calendar article {
   margin-left: 50px;
   margin-top: 40px;
