@@ -74,7 +74,7 @@ document.getElementById("newsLetterForm")
   displayMessage('Bedankt voor de registratie! We houden u op de hoogte', '#065755')
 })
 
-displayMessage('Met pijn in ons hart moeten we de editie in 2020 aflassen, volgend jaar zijn we er opnieuw bij!', "red", "15000")
+// displayMessage('Met pijn in ons hart moeten we de editie in 2020 aflassen, volgend jaar zijn we er opnieuw bij!', "red", "15000")
 
 
 // document
