@@ -110,7 +110,7 @@ document
       });
 
       emailjs.sendForm('gmail', 'signupretro', this);
-      displayMessage('Bedankt voor de registratie, bekijk uw mailbox voor meer info.', '#065755')
+      displayMessage('Bedankt voor de registratie!', '#065755')
 
       document.getElementById("retroName").value = '';
       document.getElementById("retroEmail").value = ''
