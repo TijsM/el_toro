@@ -1,4 +1,3 @@
-
 const createDateString = (day, month, year) => {
   return `${day}/${month}/${year}`;
 };
@@ -37,10 +36,6 @@ const checkDate = (_day, _month, _year) => {
   const month = parseInt(_month, 10);
   const year = parseInt(_year, 10);
 
-  console.log(day);
-  console.log(month);
-  console.log(year);
-
   if (isNaN(day) || day > 31 || day < 1) {
     displayMessage("dag moet een getal tussen 1 en 31 zijn");
     return false;
@@ -59,29 +54,27 @@ const checkDate = (_day, _month, _year) => {
   return true;
 };
 
-document.getElementById("newsLetterForm")
-.addEventListener('submit', function(event){
-  event.preventDefault()
+// document.getElementById("newsLetterForm")
+// .addEventListener('submit', function(event){
+//   event.preventDefault()
 
-  saveInAirtable("Emails", {
-    fields: {
-      Email:  document.getElementById("emailSub").value,
-      DateOfSubscribing: new Date().toISOString()
-    },
-  });
-  document.getElementById("emailSub").value = '';
+//   saveInAirtable("Emails", {
+//     fields: {
+//       Email:  document.getElementById("emailSub").value,
+//       DateOfSubscribing: new Date().toISOString()
+//     },
+//   });
+//   document.getElementById("emailSub").value = '';
 
-  displayMessage('Bedankt voor de registratie! We houden u op de hoogte', '#065755')
-})
+//   displayMessage('Bedankt voor de registratie! We houden u op de hoogte', '#065755')
+// })
 
 // displayMessage('Met pijn in ons hart moeten we de editie in 2020 aflassen, volgend jaar zijn we er opnieuw bij!', "red", "15000")
-
 
 document
   .getElementById("signUpForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log('here')
 
     let formIsValid = true;
 
@@ -104,8 +97,6 @@ document
 
     !checkValidateEmail(retroEmail) ? (formIsValid = false) : null;
     !checkDate(retroDay, retroMonth, retroyear) ? (formIsValid = false) : null;
-
-    console.log('iskid', isKid)
 
     if (formIsValid) {
       saveInAirtable("Retrokoers", {
