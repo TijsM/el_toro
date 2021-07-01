@@ -1,4 +1,3 @@
-
 const createDateString = (day, month, year) => {
   return `${day}/${month}/${year}`;
 };
@@ -37,10 +36,6 @@ const checkDate = (_day, _month, _year) => {
   const month = parseInt(_month, 10);
   const year = parseInt(_year, 10);
 
-  console.log(day);
-  console.log(month);
-  console.log(year);
-
   if (isNaN(day) || day > 31 || day < 1) {
     displayMessage("dag moet een getal tussen 1 en 31 zijn");
     return false;
@@ -59,74 +54,71 @@ const checkDate = (_day, _month, _year) => {
   return true;
 };
 
-document.getElementById("newsLetterForm")
-.addEventListener('submit', function(event){
-  event.preventDefault()
+// document.getElementById("newsLetterForm")
+// .addEventListener('submit', function(event){
+//   event.preventDefault()
 
-  saveInAirtable("Emails", {
-    fields: {
-      Email:  document.getElementById("emailSub").value,
-      DateOfSubscribing: new Date().toISOString()
-    },
-  });
-  document.getElementById("emailSub").value = '';
+//   saveInAirtable("Emails", {
+//     fields: {
+//       Email:  document.getElementById("emailSub").value,
+//       DateOfSubscribing: new Date().toISOString()
+//     },
+//   });
+//   document.getElementById("emailSub").value = '';
 
-  displayMessage('Bedankt voor de registratie! We houden u op de hoogte', '#065755')
-})
+//   displayMessage('Bedankt voor de registratie! We houden u op de hoogte', '#065755')
+// })
 
 // displayMessage('Met pijn in ons hart moeten we de editie in 2020 aflassen, volgend jaar zijn we er opnieuw bij!', "red", "15000")
 
+document
+  .getElementById("signUpForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-// document
-//   .getElementById("signUpForm")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault();
+    let formIsValid = true;
 
-//     let formIsValid = true;
+    const retroName = document.getElementById("retroName").value;
+    const retroEmail = document.getElementById("retroEmail").value;
+    const retroDay = document.getElementById("retroDay").value;
+    const retroMonth = document.getElementById("retroMonth").value;
+    const retroyear = document.getElementById("retroYear").value;
+    const retroIsLocal = document.getElementById("retroIsLocal").checked;
+    const isKid = document.getElementById('isKid').checked;
 
-//     const retroName = document.getElementById("retroName").value;
-//     const retroEmail = document.getElementById("retroEmail").value;
-//     const retroDay = document.getElementById("retroDay").value;
-//     const retroMonth = document.getElementById("retroMonth").value;
-//     const retroyear = document.getElementById("retroYear").value;
-//     const retroIsLocal = document.getElementById("retroIsLocal").checked;
-//     const isKid = document.getElementById('isKid').checked;
-
-//     // isScrolledIntoView(document.getElementById('isKid'))
+    // isScrolledIntoView(document.getElementById('isKid'))
 
 
-//     !checkEmpty(retroName, "naam") ? (formIsValid = false) : null;
-//     !checkEmpty(retroEmail, "email") ? (formIsValid = false) : null;
-//     !checkEmpty(retroDay, "geboortedatum") ? (formIsValid = false) : null;
-//     !checkEmpty(retroMonth, "geboortedatum") ? (formIsValid = false) : null;
-//     !checkEmpty(retroyear, "geboortedatum") ? (formIsValid = false) : null;
+    !checkEmpty(retroName, "naam") ? (formIsValid = false) : null;
+    !checkEmpty(retroEmail, "email") ? (formIsValid = false) : null;
+    !checkEmpty(retroDay, "geboortedatum") ? (formIsValid = false) : null;
+    !checkEmpty(retroMonth, "geboortedatum") ? (formIsValid = false) : null;
+    !checkEmpty(retroyear, "geboortedatum") ? (formIsValid = false) : null;
 
-//     !checkValidateEmail(retroEmail) ? (formIsValid = false) : null;
-//     !checkDate(retroDay, retroMonth, retroyear) ? (formIsValid = false) : null;
+    !checkValidateEmail(retroEmail) ? (formIsValid = false) : null;
+    !checkDate(retroDay, retroMonth, retroyear) ? (formIsValid = false) : null;
 
-//     console.log('iskid', isKid)
+    if (formIsValid) {
+      saveInAirtable("Retrokoers", {
+        fields: {
+          Naam: retroName,
+          Email: retroEmail,
+          Geboortedatum: createDateString(retroDay, retroMonth, retroyear),
+          Dikkelvennenaar: retroIsLocal,
+          Kinderkoers: isKid
+        },
+      });
 
-//     if (formIsValid) {
-//       saveInAirtable("Retrokoers", {
-//         fields: {
-//           Naam: retroName,
-//           Email: retroEmail,
-//           Geboortedatum: createDateString(retroDay, retroMonth, retroyear),
-//           Dikkelvennenaar: retroIsLocal,
-//           Kinderkoers: isKid
-//         },
-//       });
+      emailjs.sendForm('gmail', 'signupretro', this);
+      displayMessage('Bedankt voor de registratie, bekijk uw mailbox voor meer info.', '#065755')
 
-//       emailjs.sendForm('gmail', 'signupretro', this);
-//       displayMessage('Bedankt voor de registratie, bekijk uw mailbox voor meer info.', '#065755')
-
-//       document.getElementById("retroName").value = '';
-//       document.getElementById("retroEmail").value = ''
-//       document.getElementById("retroDay").value = ''
-//       document.getElementById("retroMonth").value = ''
-//       document.getElementById("retroYear").value = ''
-//     }
-//   });
+      document.getElementById("retroName").value = '';
+      document.getElementById("retroEmail").value = ''
+      document.getElementById("retroDay").value = ''
+      document.getElementById("retroMonth").value = ''
+      document.getElementById("retroYear").value = ''
+    }
+  });
 
 
 
